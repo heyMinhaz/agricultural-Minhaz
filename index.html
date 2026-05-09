@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agricultural Information Hub</title>
+  <meta name="description" content="Agricultural resource hub with farming guides, crop details, pest control strategies, and expert contact support.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <h1>Agricultural Information Hub</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#guides">Guides</a>
+        <a href="#crops">Crops</a>
+        <a href="#pests">Pest Control</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Complete Agricultural Information Resource</h2>
+        <p>
+          This hub provides farming guides, detailed crop information, integrated pest control strategies,
+          and a contact system for farmers and agriculture enthusiasts to request expert assistance.
+        </p>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Featured Sections</h2>
+      <div class="feature-grid">
+        <article class="card">
+          <h3>Farming Guides</h3>
+          <p>Guides by crop type, season, and farming method with step-by-step farming instructions.</p>
+          <a class="link-button" href="#guides">View guides</a>
+        </article>
+        <article class="card">
+          <h3>Crop Details</h3>
+          <p>Crop profiles for grains, fruits, vegetables, and cash crops with soil and harvest details.</p>
+          <a class="link-button" href="#crops">View crops</a>
+        </article>
+        <article class="card">
+          <h3>Pest Control Strategies</h3>
+          <p>Integrated pest management, biological controls, organic remedies, and monitoring tips.</p>
+          <a class="link-button" href="#pests">View pest control</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="guides" class="section light-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Farming Guides Section</h2>
+          <p>Use tabs or the select menu to browse guides by crop type, season, and farming method.</p>
+        </div>
+
+        <div class="controls">
+          <div class="tabs" role="tablist" aria-label="Farming guide categories">
+            <button class="tab active" type="button" data-guide="crop">Crop Types</button>
+            <button class="tab" type="button" data-guide="season">Seasons</button>
+            <button class="tab" type="button" data-guide="method">Farming Methods</button>
+          </div>
+
+          <label class="select-label">
+            Select guide category
+            <select id="guideSelect">
+              <option value="crop">Crop Types</option>
+              <option value="season">Seasons</option>
+              <option value="method">Farming Methods</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="guideContent" class="content-panel"></div>
+      </div>
+    </section>
+
+    <section id="crops" class="container section">
+      <div class="section-title">
+        <h2>Crop Details Section</h2>
+        <p>Browse major crop categories and select a crop to see varieties, cultivation, soil, harvest, nutrition, and uses.</p>
+      </div>
+
+      <div class="controls">
+        <div class="tabs" role="tablist" aria-label="Crop categories">
+          <button class="tab active" type="button" data-crop-category="grains">Grains</button>
+          <button class="tab" type="button" data-crop-category="fruits">Fruits</button>
+          <button class="tab" type="button" data-crop-category="vegetables">Vegetables</button>
+          <button class="tab" type="button" data-crop-category="cash">Cash Crops</button>
+        </div>
+
+        <label class="select-label">
+          Select crop
+          <select id="cropSelect"></select>
+        </label>
+      </div>
+
+      <div id="cropContent" class="content-panel"></div>
+    </section>
+
+    <section id="pests" class="section light-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Pest Control Strategies</h2>
+          <p>Use integrated pest management with prevention, monitoring, biological controls, and organic remedies.</p>
+        </div>
+
+        <div class="controls">
+          <div class="tabs" role="tablist" aria-label="Pest control strategies">
+            <button class="tab active" type="button" data-pest="ipm">IPM</button>
+            <button class="tab" type="button" data-pest="monitoring">Monitoring</button>
+            <button class="tab" type="button" data-pest="biological">Biological Control</button>
+            <button class="tab" type="button" data-pest="organic">Organic Remedies</button>
+          </div>
+
+          <label class="select-label">
+            Select strategy
+            <select id="pestSelect">
+              <option value="ipm">Integrated Pest Management</option>
+              <option value="monitoring">Monitoring and Early Detection</option>
+              <option value="biological">Biological Controls</option>
+              <option value="organic">Organic Remedies</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="pestContent" class="content-panel"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <div class="section-title">
+        <h2>Contact Agricultural Experts</h2>
+        <p>Submit inquiries, seek advice, request information, or share images and documents.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="card">
+          <h3>Direct Communication</h3>
+          <p><strong>Agricultural Extension Service:</strong> Local Crop Advisory Desk</p>
+          <p><strong>Email:</strong> support@agrihub.example</p>
+          <p><strong>Phone:</strong> +1 555 014 2026</p>
+          <p><strong>Office Hours:</strong> Monday-Friday, 8:00 AM-5:00 PM</p>
+        </div>
+
+        <form class="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Agricultural expertise or topic
+            <select name="expertise" required>
+              <option value="">Select topic</option>
+              <option>Crop cultivation</option>
+              <option>Soil management</option>
+              <option>Irrigation</option>
+              <option>Pest control</option>
+              <option>Harvesting and storage</option>
+              <option>General agriculture</option>
+            </select>
+          </label>
+          <label>
+            Inquiry details
+            <textarea name="message" rows="5" placeholder="Write your question or describe the field problem." required></textarea>
+          </label>
+          <label>
+            Optional attachment
+            <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx">
+          </label>
+          <button type="submit">Submit Inquiry</button>
+          <p id="formStatus" class="status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Agricultural Information Hub. Responsive static site ready for Netlify deployment.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
